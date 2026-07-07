@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors — Lumina Digital System */
+  --color-error: #ffb4ab;
+  --color-primary-fixed-dim: #68d3ff;
+  --color-on-background: #dde3e8;
+  --color-tertiary-fixed: #ffddb9;
+  --color-error-container: #93000a;
+  --color-on-secondary-container: #e6ecff;
+  --color-on-secondary: #002e6a;
+  --color-secondary: #adc6ff;
+  --color-on-primary-fixed: #001f2a;
+  --color-on-tertiary-container: #6a4000;
+  --color-surface-bright: #343a3e;
+  --color-surface-container: #1a2024;
+  --color-primary-fixed: #bee9ff;
+  --color-primary-container: #00c8ff;
+  --color-secondary-fixed: #d8e2ff;
+  --color-background: #0e1417;
+  --color-on-tertiary-fixed-variant: #663e00;
+  --color-surface-variant: #2f3639;
+  --color-tertiary: #ffcc93;
+  --color-surface-container-high: #252b2e;
+  --color-surface: #0e1417;
+  --color-on-secondary-fixed-variant: #004395;
+  --color-on-primary: #003546;
+  --color-on-surface: #dde3e8;
+  --color-primary: #99deff;
+  --color-surface-container-highest: #2f3639;
+  --color-outline-variant: #3c484f;
+  --color-surface-dim: #0e1417;
+  --color-on-secondary-fixed: #001a42;
+  --color-tertiary-container: #ffa628;
+  --color-inverse-primary: #006684;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+  --color-surface-tint: #68d3ff;
+  --color-outline: #86939a;
+  --color-tertiary-fixed-dim: #ffb964;
+  --color-on-tertiary: #472a00;
+  --color-secondary-fixed-dim: #adc6ff;
+  --color-inverse-surface: #dde3e8;
+  --color-surface-container-low: #161c20;
+  --color-inverse-on-surface: #2b3135;
+  --color-on-tertiary-fixed: #2b1700;
+  --color-secondary-container: #0566d9;
+  --color-on-surface-variant: #bcc8d0;
+  --color-on-primary-container: #005068;
+  --color-on-primary-fixed-variant: #004d64;
+  --color-surface-container-lowest: #090f12;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Spacing tokens */
+  --spacing-gutter: 32px;
+  --spacing-section-gap: 160px;
+  --spacing-unit: 8px;
+  --spacing-margin-mobile: 20px;
+
+  /* Container */
+  --container-max: 1200px;
+
+  /* Fonts */
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+
+  /* Font sizes with line-height / letter-spacing / weight */
+  --text-display-lg: 80px;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.04em;
+  --text-display-lg--font-weight: 700;
+
+  --text-display-md: 64px;
+  --text-display-md--line-height: 1.1;
+  --text-display-md--letter-spacing: -0.03em;
+  --text-display-md--font-weight: 700;
+
+  --text-headline-lg: 48px;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-lg-mobile: 32px;
+  --text-headline-lg-mobile--line-height: 1.2;
+  --text-headline-lg-mobile--letter-spacing: -0.02em;
+  --text-headline-lg-mobile--font-weight: 600;
+
+  --text-body-lg: 20px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--letter-spacing: -0.01em;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--letter-spacing: 0em;
+  --text-body-md--font-weight: 400;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 1;
+  --text-label-sm--letter-spacing: 0.1em;
+  --text-label-sm--font-weight: 600;
+
+  /* Animations */
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+body {
+  background-color: #050505;
+  color: var(--color-on-surface);
+  overflow-x: hidden;
+}
+
+.max-w-container-max {
+  max-width: var(--container-max);
+}
+
+.px-gutter {
+  padding-left: var(--spacing-gutter);
+  padding-right: var(--spacing-gutter);
+}
+
+.px-margin-mobile {
+  padding-left: var(--spacing-margin-mobile);
+  padding-right: var(--spacing-margin-mobile);
+}
+
+.py-section-gap {
+  padding-top: var(--spacing-section-gap);
+  padding-bottom: var(--spacing-section-gap);
+}
+
+@media (max-width: 768px) {
+  .py-section-gap {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.glass-panel {
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(134, 147, 154, 0.1);
+}
+
+.glow-primary {
+  box-shadow: 0px 0px 20px rgba(0, 200, 255, 0.15);
+}
+
+.hover-glow:hover {
+  box-shadow: 0px 0px 30px rgba(0, 200, 255, 0.3);
+  border-color: rgba(0, 200, 255, 0.5);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #00c8ff, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+html {
+  scroll-behavior: smooth;
+}
