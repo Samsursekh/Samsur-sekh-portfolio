@@ -1,5 +1,7 @@
 import ShaderBackground from "./ShaderBackground";
 
+const RESUME_URL = "/Samsur_Sekh_Resume-Digital_Marketer.pdf";
+
 export default function Hero() {
   return (
     <header id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -36,8 +38,8 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href="/samsur-sekh-resume.pdf"
-            download
+            href={RESUME_URL}
+            download="Samsur_Sekh_Resume-Digital_Marketer.pdf"
             className="px-8 py-4 rounded-full glass-panel text-on-surface text-[12px] font-semibold tracking-widest uppercase hover-glow transition-all flex items-center justify-center"
           >
             Download Resume
